@@ -57,14 +57,13 @@
             <div class="is-size-5 publication-authors">
             <!-- Paper authors -->
             <span class="author-block">
-              <a href="https://binglunwang.github.io/" target="_blank">Binglun Wang</a>,</span>
+              <a href="https://binglunwang.github.io/" target="_blank">Binglun Wang</a> &nbsp;&nbsp;</span>
               <span class="author-block">
-                <a href="https://niladridutt.com/" target="_blank">Niladri Shekhar Dutt</a>,</span>
+                <a href="https://niladridutt.com/" target="_blank">Niladri Shekhar Dutt</a>&nbsp; &nbsp;</span>
                 <span class="author-block">
                   <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/" target="_blank">Niloy J. Mitra</a>
                 </span>
                 </div>
-
                 <div class="is-size-5 publication-authors">
                   <span class="author-block">University College London</span>
                 </div>
@@ -90,7 +89,63 @@
     </div>
   </div>
 </section>
-                  
+                
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Layout</title>
+  <style>
+      .xcontainer {
+          display: flex;
+          flex-wrap: wrap;
+          position: relative;
+      }
+
+      .small-video {
+          flex: 1 1 20%;
+          margin: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+      }
+
+      .arrow {
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-top: 30px solid transparent;
+          border-bottom: 30px solid transparent;
+          border-left: 30px solid #808080;
+          top: 50%;
+          left: 96%;
+          transform: translate(-50%, -50%);
+      }
+
+      .large-video {
+          flex: 1 1 45%;
+          margin: 10px;
+      }
+
+      .video-row {
+          display: flex;
+          flex-wrap: wrap;
+          width: 80%;
+      }
+
+      .video-col {
+          flex: 1 1 38%;
+          margin: 5px;
+      }
+
+      .small-video video {
+          width: 66%;
+          height: 47%;
+      }
+  </style>
+</head>
+
 
 
 
@@ -98,21 +153,62 @@
 
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/merged/merged.mp4"
-        type="video/mp4">
-      </video>
-      <div class="content has-text-justified">
-        <p>
-        We present ProteusNeRF, a simple and lightweight framework for interactive editing of NeRF assets via existing
-        image manipulation tools. This is enabled by a novel 3D-aware image context that allows linking edits across multiple views.
-        We show (original and novel views) using text-guided edits. These edits take 10-20 seconds.
-        </p>
-      </div>
+
+  <div class="hero-body">
+    <div class="container">
+      <div class="xcontainer">
+        <div class="small-video">
+            <!-- Small video content goes here -->
+            <video width="100%" height="100%" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
+                <source src="static/videos/original/flowervideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="arrow"></div>
+        </div>
+        <div class="large-video">
+            <div class="video-row">
+                <div class="video-col">
+                    <!-- First large video content goes here -->
+                    <video width="100%" height="100%" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
+                        <source src="static/videos/blue_f2c_modelvideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-col">
+                    <!-- Second large video content goes here -->
+                    <video width="100%" height="100%" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
+                        <source src="static/videos/W_epoch_5_paper2video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="video-row">
+                <div class="video-col">
+                    <!-- Third large video content goes here -->
+                    <video width="100%" height="100%" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
+                        <source src="static/videos/ablation/flower_pink_zinnia/_W_contextvideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-col">
+                    <!-- Fourth large video content goes here -->
+                    <video width="100%" height="100%" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
+                        <source src="static/videos/additional-results/flower-gold.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+          ProteusNeRF is a fast and lightweight framework for interactive editing of NeRF assets via existing
+          image manipulation tools. This is enabled by a novel 3D-aware image context that allows linking edits across multiple views.
+          These edits take 10-70 seconds.
+          </p>
+        </div>
+         </div>
     </div>
+      </div>
   </div>
 </section>
 <!-- End teaser video -->
@@ -124,7 +220,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>Neural Radiance Fields (NeRFs) have recently emerged as a 
+          <p2>Neural Radiance Fields (NeRFs) have recently emerged as a 
             popular option for photo-realistic object capture due to 
             their ability to faithfully capture high-fidelity volumetric 
             content even from handheld video input. Although much research 
@@ -142,7 +238,7 @@
             adjustments. We evaluate our setup on a variety of examples 
             to demonstrate appearance and geometric edits and report 
             10-30x speedup over concurrent work focusing on text-guided 
-            NeRF editing.</p>
+            NeRF editing.</p2>
         </div>
       </div>
     </div>
@@ -150,32 +246,22 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- 1 -->
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-        <h2 class="title is-3">How it works?</h2>
-    </div>
-  </div>
-</section>
 
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <img src="static/images/overview.png" alt="MY ALT TEXT"/>
+        <h2 class="title is-3">Methodology</h2>
+        <div class="container7">
+        <img src="static/images/overview.png" alt="MY ALT TEXT"/></div>
+        <div class="container6">
+        <img src="static/images/triplaneLite.png" alt="MY ALT TEXT"/></div>
         <div class="content has-text-justified">
-          <p>  1. Takes in a set of posed images and encodes it as feature-distilled NeRF in a
-TriplaneLite representation. 
-          </p>
-          <p>
-2. select a part (yellow legos) that gets converted to a 3D mask Msel. 
-          </p>
-          <p>
-3. generate a novel 3D-aware image context that allows editing via imaging tools while still producing view-coherent edits. 
-          </p>
-          <p>
-4. converted back to view-consistent NeRFs by fine-tuning the TriplaneLite.
+          ProteusNeRF that takes in a set of posed images and encodes it as feature-distilled NeRF in a
+TriplaneLite representation. The user can easily select a part (yellow legos) that gets converted to a 3D mask Msel. We
+generate a novel 3D-aware image context that allows editing via imaging tools while still producing view-coherent edits. This
+edited context is then converted back to view-consistent NeRFs by fine-tuning the TriplaneLite. The context image is updated
+and the process is iterated (2-3 times in our examples). Editing, particularly appearance editing, runs at interactive framerates. Please refer to Section 4 of our paper for more details.
             
           </div>
         
@@ -184,78 +270,17 @@ TriplaneLite representation.
   </div>
 </section>
 
-      
-
-<!-- Teaser video-->
-<br>
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-        <h2 class="title is-3">Results</h2>
-    </div>
-  </div>
-</section>
-
-
   
 
 
-
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <section class="hero teaser">
         <br>
         <div class="container is-max-desktop">
+          <h7 class="title is-3">Results</h7>
 
-      <h7 class="title is-3">Flower sequence<br> <br></h7>
-          <div class="grid-container">
-            <div class="video">
-              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
-                <source src="static/videos/original/flowervideo.mp4" type="video/mp4">
-              </video>
-              <p class="video-description">Original NeRF</p>
-            </div>
-            <div class="video">
-              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
-                <source src="static/videos/blue_f2c_modelvideo.mp4" type="video/mp4">
-              </video>
-              <p class="video-description"><em>"Flower in blue"</em>.</p>
-            </div>
-            <div class="video">
-              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
-                <source src="static/videos/W_epoch_5_paper2video.mp4" type="video/mp4">
-              </video>
-              <p class="video-description"><em>"Flower in paper"</em>.</p>
-            </div>
-            <div class "video">
-              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
-                <source src="static/videos/ablation/flower_pink_zinnia/_W_contextvideo.mp4" type="video/mp4">
-              </video>
-              <p class="video-description"><em>"Flower in pink zinnia"</em>.</p>
-            </div>
-            <div class="video">
-              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
-                <source src="static/videos/additional-results/flower-gold.mp4" type="video/mp4">
-              </video>
-              <p class="video-description"><em>"Flower in gold"</em>.</p>
-            </div>
-          </div>
-        </div>
-    </section>
-  </div>
-</div>
-</section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <section class="hero teaser">
-        <br>
-        <div class="container is-max-desktop">
-
-      <h7 class="title is-3">Fern sequence<br> <br></h7>
           <div class="grid-container">
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
@@ -267,25 +292,25 @@ TriplaneLite representation.
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/additional-results/fern_contrast_edit_nerfmodelvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"Fern in low light"</em>.</p>
+              <p class="video-description"><em>"Fern in low light" (low contrast)</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/ablation/fern_vgreen/_W_contextvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"Fern in vibrant green"</em>.</p>
+              <p class="video-description"><em>"Fern in vibrant green"</em></p>
             </div>
-            <div class "video">
+            <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/ablation/fern_snow/_W_contextvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"Fern in snow weather"</em>.</p>
+              <p class="video-description"><em>"Fern in snow weather"</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/add/vase_edit_nerfmodelvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em> "Fern with a vase"</em>.</p>
+              <p class="video-description"><em> "Fern with a vase"</em></p>
             </div>
           </div>
         </div>
@@ -301,7 +326,6 @@ TriplaneLite representation.
         <br>
         <div class="container is-max-desktop">
 
-      <h7 class="title is-3">Horns sequence<br> <br></h7>
           <div class="grid-container">
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
@@ -313,25 +337,25 @@ TriplaneLite representation.
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/additional-results/horn_tone.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"Horns in high light"</em>.</p>
+              <p class="video-description"><em>"Horns in high light" (tone mapping)</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/additional-results/horns_firevideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"horns in fire"</em>.</p>
+              <p class="video-description"><em>"horns in fire"</em></p>
             </div>
-            <div class "video">
+            <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/ablation/horn_ice/_W_contextvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"horns in ice dragon"</em>.</p>
+              <p class="video-description"><em>"horns in ice dragon"</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/deletion/removelhorn_edit_nerfmodelvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em> "Horns missing one of its horn"</em>.</p>
+              <p class="video-description"><em> "Horns missing one of its horn"</em></p>
             </div>
           </div>
         </div>
@@ -347,7 +371,7 @@ TriplaneLite representation.
         <br>
         <div class="container is-max-desktop">
 
-      <h7 class="title is-3">Comparison for Recoloring<br> <br></h7>
+      <h7 class="title is-3">Recoloring comparison<br></h7>
           <div class="grid-container2">
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
@@ -367,7 +391,7 @@ TriplaneLite representation.
               </video>
               <p class="video-description">RecolorNeRF [3] (~120 seconds)</p>
             </div>
-            <div class "video">
+            <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/yellow-flower/ours-yellow.mp4" type="video/mp4">
               </video>
@@ -380,45 +404,41 @@ TriplaneLite representation.
 </div>
 </section>
 
-
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <section class="hero teaser">
         <br>
         <div class="container is-max-desktop">
-          
-      <h7 class="title is-3">Ablation<br> <br></h7>
-      <div class="video-grid">
-          <div class="video-container">
-            <video poster="" id="video10" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
-              <!-- Your video file here -->
-              <source src="static/videos/ablation/flower_purple_paper/_1_imgvideo.mp4" type="video/mp4">
-            </video>
-            <p class="video-description">Single view</p>
+
+      <h7 class="title is-3">Ablation<br></h7>
+          <div class="grid-container2">
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/ablation/flower_purple_paper/_1_imgvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">Single view</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/ablation/flower_purple_paper/_WO_contextvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">Iterative single-view update</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/ablation/flower_purple_paper/_fixed_contextvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">2×2 Fixed 3D-aware image context</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/ablation/flower_purple_paper/_W_contextvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><b>2×2 Iterative 3D-aware image context</b></p>
+            </div>
           </div>
-          <div class="video-container">
-            <video poster="" id="video11" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
-              <!-- Your video file here -->
-              <source src="static/videos/ablation/flower_purple_paper/_WO_contextvideo.mp4" type="video/mp4">
-            </video>
-            <p class="video-description">Iterative single-view update</p>
-          </div>
-          <div class="video-container">
-            <video poster="" id="video12" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
-              <!-- Your video file here -->
-              <source src="static/videos/ablation/flower_purple_paper/_fixed_contextvideo.mp4" type="video/mp4">
-            </video>
-            <p class="video-description"><b>2×2 Fixed 3D-aware image context</b></p>
-          </div>
-          <div class="video-container">
-            <video poster="" id="video13" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
-              <!-- Your video file here -->
-              <source src="static/videos/ablation/flower_purple_paper/_W_contextvideo.mp4" type="video/mp4">
-            </video>
-            <p class="video-description"><b>2×2 Iterative 3D-aware image context</b></p>
-          </div>
-      </div>
+        </div>
     </section>
   </div>
 </div>
@@ -426,12 +446,8 @@ TriplaneLite representation.
 
 
 
-
-
-
-
-
 <section class="hero is-small">
+  <br><br>
   <div class="hero-body">
     <div class="container">
 <br>
@@ -487,6 +503,8 @@ TriplaneLite representation.
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 0px; 
+      width: 100%; /* Ensure videos take 100% width of their parent */
+      height: 100%; 
     }
     .grid-container2 {
       display: grid;
@@ -500,7 +518,7 @@ TriplaneLite representation.
     }
   
     .item {
-      width: 70%; /* Ensure equal width for all grid items */
+      width: 70%; 
     }
   
     .video-container {
@@ -523,5 +541,20 @@ TriplaneLite representation.
       margin-top: 10px; /* Add some space between the caption and the video */
       font-size: 20px;
     }
+
+    p2 {
+      text-align: center; /* Center the captions */
+      margin-top: 10px; /* Add some space between the caption and the video */
+      font-size: 17px;
+    }
+
+    .container6 img {
+    width: 70%;
+    height: 70%;
+    }
+    .container7 img {
+    width: 200%;
+    height: 200%;
+  }
   
   </style>
