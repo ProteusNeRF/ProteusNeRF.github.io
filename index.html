@@ -47,44 +47,44 @@
 <body>
 
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">ProteusNeRF: Fast Lightweight NeRF Editing
-              using 3D-Aware Image Context</h1>
-              <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ProteusNeRF: Fast Lightweight NeRF Editing
+            using 3D-Aware Image Context</h1>
+            <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              <a href="https://binglunwang.github.io/" target="_blank">Binglun Wang</a>,</span>
               <span class="author-block">
-                <a href="https://binglunwang.github.io/" target="_blank">Binglun Wang</a>,</span>
+                <a href="https://niladridutt.com/" target="_blank">Niladri Shekhar Dutt</a>,</span>
                 <span class="author-block">
-                  <a href="https://niladridutt.com/" target="_blank">Niladri Shekhar Dutt</a>,</span>
-                  <span class="author-block">
-                    <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/" target="_blank">Niloy J. Mitra</a>
-                  </span>
-                  </div>
+                  <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/" target="_blank">Niloy J. Mitra</a>
+                </span>
+                </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">University College London</span>
-                  </div>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">University College London</span>
+                </div>
 
-                  
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                    <span class="link-block">
-                      <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
                 
-            
-          </div>
+
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </span>
+                
+            </div>
         </div>
       </div>
     </div>
@@ -105,19 +105,17 @@
         <source src="static/videos/merged/merged.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
+      <div class="content has-text-justified">
+        <p>
         We present ProteusNeRF, a simple and lightweight framework for interactive editing of NeRF assets via existing
         image manipulation tools. This is enabled by a novel 3D-aware image context that allows linking edits across multiple views.
         We show (original and novel views) using text-guided edits. These edits take 10-20 seconds.
-      </h2>
-
+        </p>
+      </div>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
-
-
-
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -126,16 +124,26 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Neural Radiance Fields (NeRFs) have recently emerged as a popular option for photo-realistic object capture due to their ability to faithfully capture high-fidelity volumetric content even from handheld video input. Although much research has been devoted to efficient optimization leading to real-time training and rendering, options for interactive editing NeRFs remain limited. 
-
-We present a very simple but effective neural network architecture that is fast and efficient while maintaining a low memory footprint. This architecture can be incrementally guided through user-friendly image-based edits. 
-
-Our representation allows straightforward object selection via semantic feature distillation at the training stage. More importantly, we propose a local 3D-aware image context to facilitate view-consistent image editing that can then be distilled into fine-tuned NeRFs, via geometric and appearance adjustments. 
-
-We evaluate our setup on a variety of examples to demonstrate appearance and geometric edits and report 10-30x speedup over concurrent work focusing on text-guided NeRF editing. 
-            
-          </div>
+          <p>Neural Radiance Fields (NeRFs) have recently emerged as a 
+            popular option for photo-realistic object capture due to 
+            their ability to faithfully capture high-fidelity volumetric 
+            content even from handheld video input. Although much research 
+            has been devoted to efficient optimization leading to real-time 
+            training and rendering, options for interactive editing 
+            NeRFs remain limited. We present a very simple but effective 
+            neural network architecture that is fast and efficient while 
+            maintaining a low memory footprint. This architecture can be 
+            incrementally guided through user-friendly image-based edits. 
+            Our representation allows straightforward object selection 
+            via semantic feature distillation at the training stage. 
+            More importantly, we propose a local 3D-aware image context 
+            to facilitate view-consistent image editing that can then 
+            be distilled into fine-tuned NeRFs, via geometric and appearance 
+            adjustments. We evaluate our setup on a variety of examples 
+            to demonstrate appearance and geometric edits and report 
+            10-30x speedup over concurrent work focusing on text-guided 
+            NeRF editing.</p>
+        </div>
       </div>
     </div>
   </div>
