@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/> 
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ProteusNeRF</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">ProteusNeRF: Fast Lightweight NeRF Editing
+              using 3D-Aware Image Context</h1>
+              <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://binglunwang.github.io/" target="_blank">Binglun Wang</a>,</span>
+                <span class="author-block">
+                  <a href="https://niladridutt.com/" target="_blank">Niladri Shekhar Dutt</a>,</span>
+                  <span class="author-block">
+                    <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/" target="_blank">Niloy J. Mitra</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">University College London</span>
+                  </div>
+
+                  
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+                  
+
+
+
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/merged/merged.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        We present ProteusNeRF, a simple and lightweight framework for interactive editing of NeRF assets via existing
+        image manipulation tools. This is enabled by a novel 3D-aware image context that allows linking edits across multiple views.
+        We show (original and novel views) using text-guided edits. These edits take 10-20 seconds.
+      </h2>
+
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Neural Radiance Fields (NeRFs) have recently emerged as a popular option for photo-realistic object capture due to their ability to faithfully capture high-fidelity volumetric content even from handheld video input. Although much research has been devoted to efficient optimization leading to real-time training and rendering, options for interactive editing NeRFs remain limited. 
+
+We present a very simple but effective neural network architecture that is fast and efficient while maintaining a low memory footprint. This architecture can be incrementally guided through user-friendly image-based edits. 
+
+Our representation allows straightforward object selection via semantic feature distillation at the training stage. More importantly, we propose a local 3D-aware image context to facilitate view-consistent image editing that can then be distilled into fine-tuned NeRFs, via geometric and appearance adjustments. 
+
+We evaluate our setup on a variety of examples to demonstrate appearance and geometric edits and report 10-30x speedup over concurrent work focusing on text-guided NeRF editing. 
+            
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- 1 -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">How it works?</h2>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <img src="static/images/overview.png" alt="MY ALT TEXT"/>
+        <div class="content has-text-justified">
+          <p>  1. Takes in a set of posed images and encodes it as feature-distilled NeRF in a
+TriplaneLite representation. 
+          </p>
+          <p>
+2. select a part (yellow legos) that gets converted to a 3D mask Msel. 
+          </p>
+          <p>
+3. generate a novel 3D-aware image context that allows editing via imaging tools while still producing view-coherent edits. 
+          </p>
+          <p>
+4. converted back to view-consistent NeRFs by fine-tuning the TriplaneLite.
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+<!-- Teaser video-->
+<br>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Results</h2>
+    </div>
+  </div>
+</section>
+
+
+  
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <section class="hero teaser">
+        <br>
+        <div class="container is-max-desktop">
+
+      <h7 class="title is-3">Flower sequence<br> <br></h7>
+          <div class="grid-container">
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/original/flowervideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">Original NeRF</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/blue_f2c_modelvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"Flower in blue"</em>.</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/W_epoch_5_paper2video.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"Flower in paper"</em>.</p>
+            </div>
+            <div class "video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/ablation/flower_pink_zinnia/_W_contextvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"Flower in pink zinnia"</em>.</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/additional-results/flower-gold.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"Flower in gold"</em>.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+</div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <section class="hero teaser">
+        <br>
+        <div class="container is-max-desktop">
+
+      <h7 class="title is-3">Fern sequence<br> <br></h7>
+          <div class="grid-container">
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/add/fernvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">Original NeRF</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/additional-results/fern_contrast_edit_nerfmodelvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"Fern in low light"</em>.</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/ablation/fern_vgreen/_W_contextvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"Fern in vibrant green"</em>.</p>
+            </div>
+            <div class "video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/ablation/fern_snow/_W_contextvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"Fern in snow weather"</em>.</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/add/vase_edit_nerfmodelvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em> "Fern with a vase"</em>.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+</div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <section class="hero teaser">
+        <br>
+        <div class="container is-max-desktop">
+
+      <h7 class="title is-3">Horns sequence<br> <br></h7>
+          <div class="grid-container">
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/deletion/hornsvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">Original NeRF</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/additional-results/horn_tone.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"Horns in high light"</em>.</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/additional-results/horns_firevideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"horns in fire"</em>.</p>
+            </div>
+            <div class "video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/ablation/horn_ice/_W_contextvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em>"horns in ice dragon"</em>.</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/deletion/removelhorn_edit_nerfmodelvideo.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><em> "Horns missing one of its horn"</em>.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+</div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <section class="hero teaser">
+        <br>
+        <div class="container is-max-desktop">
+
+      <h7 class="title is-3">Comparison for Recoloring<br> <br></h7>
+          <div class="grid-container2">
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/yellow-flower/clip-yellow.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">CLIP-NeRF [1] (~10 seconds)</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/yellow-flower/dff-yellow.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">DFF [2] (selection with DFF + CLIP-NeRF)</p>
+            </div>
+            <div class="video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/yellow-flower/recolor-yellow.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">RecolorNeRF [3] (~120 seconds)</p>
+            </div>
+            <div class "video">
+              <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
+                <source src="static/videos/yellow-flower/ours-yellow.mp4" type="video/mp4">
+              </video>
+              <p class="video-description"><b>Ours (10 seconds)</b></p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+</div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <section class="hero teaser">
+        <br>
+        <div class="container is-max-desktop">
+          
+      <h7 class="title is-3">Ablation<br> <br></h7>
+      <div class="video-grid">
+          <div class="video-container">
+            <video poster="" id="video10" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
+              <!-- Your video file here -->
+              <source src="static/videos/ablation/flower_purple_paper/_1_imgvideo.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Single view</p>
+          </div>
+          <div class="video-container">
+            <video poster="" id="video11" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
+              <!-- Your video file here -->
+              <source src="static/videos/ablation/flower_purple_paper/_WO_contextvideo.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Iterative single-view update</p>
+          </div>
+          <div class="video-container">
+            <video poster="" id="video12" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
+              <!-- Your video file here -->
+              <source src="static/videos/ablation/flower_purple_paper/_fixed_contextvideo.mp4" type="video/mp4">
+            </video>
+            <p class="video-description"><b>2×2 Fixed 3D-aware image context</b></p>
+          </div>
+          <div class="video-container">
+            <video poster="" id="video13" autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline>
+              <!-- Your video file here -->
+              <source src="static/videos/ablation/flower_purple_paper/_W_contextvideo.mp4" type="video/mp4">
+            </video>
+            <p class="video-description"><b>2×2 Iterative 3D-aware image context</b></p>
+          </div>
+      </div>
+    </section>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+<br>
+[1] Wang, C., Chai, M., He, M., Chen, D. and Liao, J., 2022. Clip-nerf: Text-and-image driven manipulation of neural radiance fields. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 3835-3844).
+</br>
+<br>
+[2] Kobayashi, S., Matsumoto, E. and Sitzmann, V., 2022. Decomposing nerf for editing via feature field distillation. Advances in Neural Information Processing Systems, 35, pp.23311-23330.
+</br>
+<br>
+[3] Gong, B., Wang, Y., Han, X. and Dou, Q., 2023. RecolorNeRF: Layer Decomposed Radiance Field for Efficient Color Editing of 3D Scenes. arXiv preprint arXiv:2301.07958.
+</br>
+</div>
+</div>
+</section>
+<!--BibTex citation -->
+<!-- <section class="section" id="BibTeX"> -->
+  <!-- <div class="container is-max-desktop content"> -->
+    <!-- <h2 class="title">BibTeX</h2> -->
+    <!-- <pre><code>BibTex Code Here</code></pre> -->
+  <!-- </div> -->
+<!-- </section> -->
+<!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
+
+
+  
+  <style>
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0px; 
+    }
+    .grid-container2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px; /* Adjust the gap between videos */
+    }
+  
+    .item {
+      width: 70%; /* Ensure equal width for all grid items */
+    }
+  
+    .video-container {
+      position: relative;
+    }
+  
+    video {
+      width: 100%; /* Ensure videos take 100% width of their parent */
+      height: 100%; /* Ensure videos take 100% height of their parent */
+      
+      text-align: center; 
+    }
+
+    .video-description {
+      margin: 2px 0;
+    }
+  
+    p {
+      text-align: center; /* Center the captions */
+      margin-top: 10px; /* Add some space between the caption and the video */
+      font-size: 20px;
+    }
+  
+  </style>
