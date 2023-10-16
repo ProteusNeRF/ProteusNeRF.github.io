@@ -211,7 +211,7 @@
         <div class="content has-text-justified">
           <p>
           ProteusNeRF is a fast and lightweight framework for interactive editing of NeRF assets via existing
-          image manipulation tools. This is enabled by a novel 3D-aware image context that allows linking edits across multiple views.
+          image manipulation tools or generative frameworks. This is enabled by a novel 3D-aware image context that allows linking edits across multiple views.
           These edits take <b>10-70 seconds</b>.
           </p>
         </div>
@@ -229,7 +229,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p2>Neural Radiance Fields (NeRFs) have recently emerged as a 
+          <p class="psmaller">Neural Radiance Fields (NeRFs) have recently emerged as a 
             popular option for photo-realistic object capture due to 
             their ability to faithfully capture high-fidelity volumetric 
             content even from handheld video input. Although much research 
@@ -247,7 +247,7 @@
             adjustments. We evaluate our setup on a variety of examples 
             to demonstrate appearance and geometric edits and report 
             10-30x speedup over concurrent work focusing on text-guided 
-            NeRF editing.</p2>
+            NeRF editing.</p>
         </div>
       </div>
     </div>
@@ -284,53 +284,50 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
 
 
 <section class="hero is-small">
-  <div class="hero-body">
     <div class="container">
       <section class="hero teaser">
         <br>
         <div class="container is-max-desktop">
-          <h7 class="title is-3">Results</h7>
-
+          <h2 class="title is-3 has-text-centered">Results</h2> 
+          <p class="psmaller"></p>
           <div class="grid-container">
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/add/fernvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description">Original NeRF</p>
+              <p class="psmaller" class="video-description">Original NeRF</p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/additional-results/fern_contrast_edit_nerfmodelvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"Fern in low light" (low contrast)</em></p>
+              <p class="psmaller" class="video-description"><em>"Fern in low light" (low contrast)</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/fern_vg.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"Fern in vibrant green"</em></p>
+              <p class="psmaller" class="video-description"><em>"Fern in vibrant green"</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/fern_snow.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"Fern in snow weather"</em></p>
+              <p class="psmaller" class="video-description"><em>"Fern in snow weather"</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/add/vase_edit_nerfmodelvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em> "Fern with a vase"</em></p>
+              <p class="psmaller" class="video-description"><em> "Fern with a vase"</em></p>
             </div>
           </div>
         </div>
     </section>
   </div>
-</div>
 </section>
 
 <section class="hero is-small">
-  <div class="hero-body">
     <div class="container">
       <section class="hero teaser">
         <br>
@@ -341,127 +338,130 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/deletion/hornsvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description">Original NeRF</p>
+              <p class="psmaller" class="video-description">Original NeRF</p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/additional-results/horn_tone.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"Horns in high light" (tone mapping)</em></p>
+              <p class="psmaller" class="video-description"><em>"Horns in high light" (tone mapping)</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/additional-results/horns_firevideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"horns in fire"</em></p>
+              <p class="psmaller" class="video-description"><em>"horns in fire"</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/additional-results/horns_ice_0.06_1video.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em>"horns in ice dragon"</em></p>
+              <p class="psmaller" class="video-description"><em>"horns in ice dragon"</em></p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/deletion/removelhorn_edit_nerfmodelvideo.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><em> "Horns missing one of its horn"</em></p>
+              <p class="psmaller" class="video-description"><em> "Horns missing one of its horn"</em></p>
             </div>
           </div>
         </div>
     </section>
   </div>
-</div>
 </section>
 
-<section class="hero is-small">
-  <div class="hero-body">
+<section class="hero is-small section-spacing">
     <div class="container">
       <section class="hero teaser">
-        <br> <br>
         <div class="container is-max-desktop">
 
-      <h7 class="title is-3">Recoloring comparison<br></h7>
+          <h2 class="title is-3 has-text-centered">Recoloring comparison<br></h2>
           <div class="grid-container2">
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/yellow-flower/clip-yellow.mp4" type="video/mp4">
               </video>
-              <p class="video-description">CLIP-NeRF <a href="https://cassiepython.github.io/clipnerf/">[1]</a> (~10 seconds)</p>
+              <p class="psmaller" class="video-description">CLIP-NeRF <a href="https://cassiepython.github.io/clipnerf/">[1]</a> (~10 seconds)</p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/yellow-flower/dff-yellow.mp4" type="video/mp4">
               </video>
-              <p class="video-description">DFF <a href="https://pfnet-research.github.io/distilled-feature-fields/">[2]</a> (selection with DFF + CLIP-NeRF)</p>
+              <p class="psmaller" class="video-description">DFF <a href="https://pfnet-research.github.io/distilled-feature-fields/">[2]</a> (selection with DFF + CLIP-NeRF)</p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/yellow-flower/recolor-yellow.mp4" type="video/mp4">
               </video>
-              <p class="video-description">RecolorNeRF <a href="https://sites.google.com/view/recolornerf?pli=1">[3]</a> (~120 seconds)</p>
+              <p class="psmaller" class="video-description">RecolorNeRF <a href="https://sites.google.com/view/recolornerf?pli=1">[3]</a> (~120 seconds)</p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/yellow-flower/ours-yellow.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><b>Ours (10 seconds)</b></p>
+              <p class="psmaller" class="video-description"><b>Ours (10 seconds)</b></p>
             </div>
           </div>
         </div>
     </section>
   </div>
-</div>
 </section>
 
-<section class="hero is-small">
-  <div class="hero-body">
+<section class="hero is-small section-spacing">
     <div class="container">
       <section class="hero teaser">
-        <br> <br>
         <div class="container is-max-desktop">
 
-      <h7 class="title is-3">Ablation<br></h7>
+          <h2 class="title is-3 has-text-centered">Ablation<br></h2>
           <div class="grid-container2">
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/ablation_1img.mp4" type="video/mp4">
               </video>
-              <p class="video-description">Single view</p>
+              <p class="psmaller" class="video-description">Single view</p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/ablation_WO.mp4" type="video/mp4">
               </video>
-              <p class="video-description">Iterative single-view update</p>
+              <p class="psmaller" class="video-description">Iterative single-view update</p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/ablation_fix.mp4" type="video/mp4">
               </video>
-              <p class="video-description">2×2 Fixed 3D-aware image context</p>
+              <p class="psmaller" class="video-description">2×2 Fixed 3D-aware image context</p>
             </div>
             <div class="video">
               <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
                 <source src="static/videos/ablation_W.mp4" type="video/mp4">
               </video>
-              <p class="video-description"><b>2×2 Iterative 3D-aware image context</b></p>
+              <p class="psmaller" class="video-description"><b>2×2 Iterative 3D-aware image context</b></p>
             </div>
           </div>
         </div>
     </section>
   </div>
-</div>
 </section>
 
+<section class="section hero is-small section-spacing2">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          Results using our 2×2 3D-aware image context for NeRF editing show consistent geometry and appearance, along with the fewest artifacts (floaters).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
 <!--BibTex citation -->
 <section class="section" id="BibTeX">
-  <br> <br> <br> <br>
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
     <pre><code>BibTex Code Here</code></pre>
   </div>
 </section>
@@ -472,8 +472,8 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          <p class="psmaller">
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
           </p>
 
         </div>
@@ -485,7 +485,7 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
 <!-- Statcounter tracking code -->
   
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fproteusnerf.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
     <!-- End of Statcounter Code -->
 
   </body>
@@ -505,7 +505,9 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
     .grid-container2 {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 4px;
+      gap: 0px;
+      width: 100%; /* Ensure videos take 100% width of their parent */
+      height: 100%; 
     }
     .video-grid {
       display: grid;
@@ -538,7 +540,7 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
       font-size: 20px;
     }
 
-    p2 {
+    .psmaller {
       text-align: center; /* Center the captions */
       margin-top: 10px; /* Add some space between the caption and the video */
       font-size: 17px;
@@ -552,5 +554,27 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
     width: 100%;
     height: 100%;
   }
+  .section-spacing {
+        margin-top: 100px;
+        /* Responsive spacing for smaller screens */
+        @media (max-width: 768px) {
+            margin-top: 180px;
+        }
+
+        @media (max-width: 480px) {
+            margin-top: 220px;
+        }
+    }
+    .section-spacing2 {
+        margin-top: 60px;
+        /* Responsive spacing for smaller screens */
+        @media (max-width: 768px) {
+            margin-top: 100px;
+        }
+
+        @media (max-width: 480px) {
+            margin-top: 120px;
+        }
+    }
   
   </style>
