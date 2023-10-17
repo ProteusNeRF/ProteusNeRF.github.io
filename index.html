@@ -131,6 +131,24 @@
           transform: translate(-50%, -50%);
       }
 
+      @media (max-width: 828px) {
+    .arrow {
+        left: 100%; /* Adjust the left position for screens up to 768px wide */
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid #4b4b4b;
+          }
+      }
+
+      @media (max-width: 480px) {
+          .arrow {
+            border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          border-left: 15px solid #4b4b4b;
+              left: 105%; /* Adjust the left position for screens up to 480px wide */
+          }
+      }
+
       .large-video {
           flex: 1 1 45%;
           margin: 10px;
@@ -563,23 +581,23 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
   .section-spacing {
         margin-top: 100px;
         /* Responsive spacing for smaller screens */
-        @media (max-width: 768px) {
-            margin-top: 180px;
+        @media (max-width: 828px) {
+            margin-top: 140px;
         }
 
         @media (max-width: 480px) {
-            margin-top: 360px;
+            margin-top: 180px;
         }
     }
     .section-spacing2 {
         margin-top: 60px;
         /* Responsive spacing for smaller screens */
-        @media (max-width: 768px) {
+        @media (max-width: 828px) {
             margin-top: 100px;
         }
 
         @media (max-width: 480px) {
-            margin-top: 200px;
+            margin-top: 150px;
         }
     }
   
