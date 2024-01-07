@@ -530,6 +530,7 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
       <div class="container is-max-desktop">
 
         <h2 class="title is-3 has-text-centered">Comparison with InstructNeRF2NeRF <a href="https://instruct-nerf2nerf.github.io/" target="_blank">[2]</a><br></h2>
+        <p class="psmaller">Our 2×2 3D-aware image context can be used with InstructNeRF2NeRF to signficiantly reduce editing time.</p>
         <div class="grid-container">
           <div class="video">
             <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
@@ -578,45 +579,6 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Layered editing</h2> 
         <p class="psmaller">Our TriPlaneLite architecture allows a single MLP φ comprising of 36KB to store each edit. Thus, we can perform layered editing of NeRFs akin to image editors to enable controlled and creative workflows.</p>
-        <div class="grid-container2">
-          <div class="video">
-            <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
-              <source src="static/LLFF_layer_editing/fern/original/w_distill_rgb_video.mp4" type="video/mp4">
-            </video>
-            <p class="psmaller" class="video-description">c: Original NeRF</p>
-          </div>
-          <div class="video">
-            <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
-              <source src="static/LLFF_layer_editing/fern/layer1/purplergb_video.mp4" type="video/mp4">
-            </video>
-            <p class="psmaller" class="video-description"><em>L1(c): "Purple Fern"</em></p>
-          </div>
-          <div class="video">
-            <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
-              <source src="static/LLFF_layer_editing/fern/layer2/highcontrast/highcontrastrgb_video.mp4" type="video/mp4">
-            </video>
-            <p class="psmaller" class="video-description"><em>L2(c): High contrast</em></p>
-          </div>
-          <div class="video">
-            <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
-              <source src="static/LLFF_layer_editing/fern/layer1 + layer2 (not layer2(layer1))/purple+highcontrast/purple_+_highcontrastrgb_video.mp4" type="video/mp4">
-            </video>
-            <p class="psmaller" class="video-description"><em><b>Combined: L2(L1(c))</b></em></p>
-          </div>
-        </div>
-      </div>
-  </section>
-</div>
-</section>
-
-<br>
-
-<section class="hero is-small">
-  <div class="container">
-    <section class="hero teaser">
-      <br>
-      <div class="container is-max-desktop">
-        <p class="psmaller"></p>
         <div class="grid-container2">
           <div class="video">
             <video autoplay controls muted loop disablepictureinpicture controlslist="nodownload" playsinline> <!-- 添加 loop 属性 -->
