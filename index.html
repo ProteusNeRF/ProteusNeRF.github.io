@@ -689,12 +689,30 @@ and the process is iterated (2-3 times in our examples). Editing, particularly a
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
     <pre><code>
-      @article{wang2023proteusnerf,
+      <!-- @article{wang2023proteusnerf,
         title={Proteusnerf: Fast lightweight nerf editing using 3d-aware image context},
         author={Wang, Binglun and Dutt, Niladri Shekhar and Mitra, Niloy J},
         journal={arXiv preprint arXiv:2310.09965},
         year={2023}
-      }     
+      }      -->
+      @article{10.1145/3651290,
+        author = {Wang, Binglun and Dutt, Niladri Shekhar and Mitra, Niloy J.},
+        title = {ProteusNeRF: Fast Lightweight NeRF Editing using 3D-Aware Image Context},
+        year = {2024},
+        issue_date = {May 2024},
+        publisher = {Association for Computing Machinery},
+        address = {New York, NY, USA},
+        volume = {7},
+        number = {1},
+        url = {https://doi.org/10.1145/3651290},
+        doi = {10.1145/3651290},
+        abstract = {Neural Radiance Fields (NeRFs) have recently emerged as a popular option for photo-realistic object capture due to their ability to faithfully capture high-fidelity volumetric content even from handheld video input. Although much research has been devoted to efficient optimization leading to real-time training and rendering, options for interactive editing NeRFs remain limited. We present a very simple but effective neural network architecture that is fast and efficient while maintaining a low memory footprint. This architecture can be incrementally guided through user-friendly image-based edits. Our representation allows straightforward object selection via semantic feature distillation at the training stage. More importantly, we propose a local 3D-aware image context to facilitate view-consistent image editing that can then be distilled into fine-tuned NeRFs, via geometric and appearance adjustments. We evaluate our setup on a variety of examples to demonstrate appearance and geometric edits and report 10-30x speedup over concurrent work focusing on text-guided NeRF editing. Video results and code can be found on our project webpage at https://proteusnerf.github.io.},
+        journal = {Proc. ACM Comput. Graph. Interact. Tech.},
+        month = {may},
+        articleno = {22},
+        numpages = {17},
+        keywords = {Generative AI, Interactive 3D Editing, Neural Editing, Neural Radiance Field, ProteusNeRF, Stable Diffusion Model}
+      }
     </code></pre>
   </div>
 </section>
